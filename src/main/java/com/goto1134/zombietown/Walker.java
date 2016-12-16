@@ -87,7 +87,7 @@ abstract class Walker extends Agent {
         }
     }
 
-    void sendKillMessage(AID target) {
+    protected void sendKillMessage(AID target) {
         ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
         sendTypedMessage(target, msg);
         cat.info("Request kill " + target.getName());
@@ -101,7 +101,7 @@ abstract class Walker extends Agent {
         turn();
     }
 
-    void turn() {
+    protected void turn() {
         if (type == HUMAN) {
             cat.info("Turned");
             setType(ZOMBIE);
