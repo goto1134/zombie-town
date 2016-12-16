@@ -9,12 +9,11 @@ import jade.core.AID;
 public class Scared extends Human {
     @Override
     protected void takeDown() {
-
+        cat.info(getName() + " ran away");
     }
 
     @Override
     protected void onZombieArrived(AID zombie) {
-        cat.info(getName() + " ran away");
         doDelete();
     }
 }

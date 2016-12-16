@@ -94,6 +94,7 @@ abstract class Walker extends Agent {
     }
 
     protected void onZombieArrived(AID zombie) {
+        // This method should be overridden to do some action when zombie arrives in town
     }
 
     protected void onAttackedByZombie(AID zombie) {
